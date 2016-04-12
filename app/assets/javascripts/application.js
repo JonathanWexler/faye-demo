@@ -18,7 +18,8 @@
 
 $(function() {
   var faye = new Faye.Client('http://localhost:9292/faye');
-  faye.subscribe('/', function (data) {
+  faye.subscribe('/home/index', function (data) {
+  	// alert("OK HERE!!");
     //use data here with JS code
         eval(data);
     }); 
